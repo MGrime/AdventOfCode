@@ -31,7 +31,7 @@ namespace aoc
 			int inputNum = std::stoi(str);
 			inputNumbers.push_back(inputNum);
 		}
-
+		file.close();
 		// Loop lines
 
 		// First number
@@ -80,7 +80,7 @@ namespace aoc
 			int inputNum = std::stoi(str);
 			inputNumbers.push_back(inputNum);
 		}
-
+		file.close();
 		// Loop
 		int numBigger = 0;
 
