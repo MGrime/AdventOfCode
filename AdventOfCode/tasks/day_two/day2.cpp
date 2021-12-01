@@ -2,10 +2,13 @@
 
 namespace aoc
 {
-	const char* inputPath = "day_one.txt";
-
-	void executeDay2()
+	namespace d2
 	{
+		const char* inputPath = "day_one.txt";
 
+		void execute()
+		{
+
+		}
 	}
 }

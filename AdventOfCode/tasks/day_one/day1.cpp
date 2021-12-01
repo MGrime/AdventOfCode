@@ -8,112 +8,115 @@
 
 namespace aoc
 {
-	const char* inputPath = "day_one.txt";
-
-	void d1PartOne()
+	namespace d1
 	{
-		// Open input text
-		std::ifstream file;
+		const char* inputPath = "day_one.txt";
 
-		file.open(inputPath);
-		if (file.fail())
+		void partOne()
 		{
-			std::cout << "Failed to open input file!";
-			return;
-		}
+			// Open input text
+			std::ifstream file;
 
-		std::string str;
-		std::vector<int> inputNumbers;
-
-		// Read lines
-		while (std::getline(file, str))
-		{
-			int inputNum = std::stoi(str);
-			inputNumbers.push_back(inputNum);
-		}
-		file.close();
-		// Loop lines
-
-		// First number
-		int prevNum = inputNumbers.at(0);
-
-		// Number bigger
-		int numBigger = 0;
-
-		for (int i = 1; i < inputNumbers.size(); ++i)
-		{
-			// Get curr num
-			int currNum = inputNumbers.at(i);
-
-			// Check
-			if (currNum > prevNum)
+			file.open(inputPath);
+			if (file.fail())
 			{
-				numBigger++;
+				std::cout << "Failed to open input file!";
+				return;
 			}
 
-			// Store this as previous
-			prevNum = currNum;
-		}
+			std::string str;
+			std::vector<int> inputNumbers;
 
-		// Output
-		std::cout << "Part 1: Amount of measurements bigger: " << numBigger << '\n';
-	}
-
-	void d1PartTwo()
-	{
-		// Open input text
-		std::ifstream file;
-
-		file.open(inputPath);
-		if (file.fail())
-		{
-			std::cout << "Failed to open input file!";
-			return;
-		}
-
-		std::string str;
-		std::vector<int> inputNumbers;
-
-		// Read lines
-		while (std::getline(file, str))
-		{
-			int inputNum = std::stoi(str);
-			inputNumbers.push_back(inputNum);
-		}
-		file.close();
-		// Loop
-		int numBigger = 0;
-
-		int prevSum = inputNumbers.at(0) + inputNumbers.at(1) + inputNumbers.at(2);
-
-		for (int i = 1; i < inputNumbers.size(); ++i)
-		{
-			int currSum = inputNumbers.at(i);
-			if (i + 1 < inputNumbers.size())
+			// Read lines
+			while (std::getline(file, str))
 			{
-				currSum += inputNumbers.at(i + 1);
+				int inputNum = std::stoi(str);
+				inputNumbers.push_back(inputNum);
 			}
-			if (i + 2 < inputNumbers.size())
+			file.close();
+			// Loop lines
+
+			// First number
+			int prevNum = inputNumbers.at(0);
+
+			// Number bigger
+			int numBigger = 0;
+
+			for (int i = 1; i < inputNumbers.size(); ++i)
 			{
-				currSum += inputNumbers.at(i + 2);
+				// Get curr num
+				int currNum = inputNumbers.at(i);
+
+				// Check
+				if (currNum > prevNum)
+				{
+					numBigger++;
+				}
+
+				// Store this as previous
+				prevNum = currNum;
 			}
 
-			if (currSum > prevSum)
-			{
-				numBigger++;
-			}
-
-			prevSum = currSum;
+			// Output
+			std::cout << "Part 1: Amount of measurements bigger: " << numBigger << '\n';
 		}
 
-		// Output
-		std::cout << "Part 2: Amount of measurements bigger: " << numBigger << '\n';
+		void partTwo()
+		{
+			// Open input text
+			std::ifstream file;
 
-	}
+			file.open(inputPath);
+			if (file.fail())
+			{
+				std::cout << "Failed to open input file!";
+				return;
+			}
 
-	void executeDay1()
-	{
-		d1PartOne();
-		d1PartTwo();
+			std::string str;
+			std::vector<int> inputNumbers;
+
+			// Read lines
+			while (std::getline(file, str))
+			{
+				int inputNum = std::stoi(str);
+				inputNumbers.push_back(inputNum);
+			}
+			file.close();
+			// Loop
+			int numBigger = 0;
+
+			int prevSum = inputNumbers.at(0) + inputNumbers.at(1) + inputNumbers.at(2);
+
+			for (int i = 1; i < inputNumbers.size(); ++i)
+			{
+				int currSum = inputNumbers.at(i);
+				if (i + 1 < inputNumbers.size())
+				{
+					currSum += inputNumbers.at(i + 1);
+				}
+				if (i + 2 < inputNumbers.size())
+				{
+					currSum += inputNumbers.at(i + 2);
+				}
+
+				if (currSum > prevSum)
+				{
+					numBigger++;
+				}
+
+				prevSum = currSum;
+			}
+
+			// Output
+			std::cout << "Part 2: Amount of measurements bigger: " << numBigger << '\n';
+
+		}
+
+		void execute()
+		{
+			partOne();
+			partTwo();
+		}
 	}
 }

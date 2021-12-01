@@ -9,8 +9,8 @@ typedef void (*task_execute)(void);
 namespace aoc
 {
 	const std::unordered_map<int, task_execute> EXECUTION_MAP {
-		{1, executeDay1},
-		{2, executeDay2}
+		{1, d1::execute},
+		{2, d2::execute}
 	};
 
 	const size_t MAX_DAYS = aoc::EXECUTION_MAP.size();

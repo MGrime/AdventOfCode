@@ -2,5 +2,8 @@
 
 namespace aoc
 {
-	void executeDay2();
+	namespace d2
+	{
+		void execute();
+	}
 }
