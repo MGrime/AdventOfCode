@@ -6,6 +6,8 @@
 #include <vector>
 #include <filesystem>
 
+#include "../../utility/funcs.hpp"
+
 namespace aoc
 {
 	namespace d1
@@ -14,26 +16,13 @@ namespace aoc
 
 		void partOne()
 		{
-			// Open input text
-			std::ifstream file;
+			const auto input = readFile(inputPath);
 
-			file.open(inputPath);
-			if (file.fail())
-			{
-				std::cout << "Failed to open input file!";
-				return;
-			}
-
-			std::string str;
 			std::vector<int> inputNumbers;
-
-			// Read lines
-			while (std::getline(file, str))
+			for (const auto& line : input)
 			{
-				int inputNum = std::stoi(str);
-				inputNumbers.push_back(inputNum);
+				inputNumbers.push_back(std::stoi(line));
 			}
-			file.close();
 			// Loop lines
 
 			// First number
@@ -63,26 +52,14 @@ namespace aoc
 
 		void partTwo()
 		{
-			// Open input text
-			std::ifstream file;
-
-			file.open(inputPath);
-			if (file.fail())
-			{
-				std::cout << "Failed to open input file!";
-				return;
-			}
-
-			std::string str;
+			const auto input = readFile(inputPath);
+			
 			std::vector<int> inputNumbers;
-
-			// Read lines
-			while (std::getline(file, str))
+			for (const auto& line : input)
 			{
-				int inputNum = std::stoi(str);
-				inputNumbers.push_back(inputNum);
+				inputNumbers.push_back(std::stoi(line));
 			}
-			file.close();
+
 			// Loop
 			int numBigger = 0;
 

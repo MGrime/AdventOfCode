@@ -1,25 +1,11 @@
 #pragma once
 #include <istream>
 #include <string>
+#include <vector>
 
 namespace aoc
 {
-	int parseDigit(char digit) 
-	{
-		return digit - '0';
-	}
-
-	int readNum(std::istream& in)
-	{
-		std::string buffer;
-		std::getline(in, buffer);
-
-		if (buffer.empty())
-		{
-			return -1;
-		}
-		
-		return parseDigit(buffer.at(0));
-
-	}
+	int parseDigit(char digit);
+	int readNum(std::istream& in);
+	std::vector<std::string> readFile(const char* path);
 }

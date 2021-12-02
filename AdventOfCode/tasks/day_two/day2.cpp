@@ -1,9 +1,11 @@
 #include "day2.hpp"
+
 #include <iostream>
 #include <fstream>
 #include <string>
 #include <vector>
-#include <filesystem>
+
+#include "../../utility/funcs.hpp"
 
 namespace aoc
 {
@@ -26,30 +28,12 @@ namespace aoc
 
 		void execute()
 		{
-			// Open input text
-			std::ifstream file;
-
-			file.open(inputPath);
-			if (file.fail())
-			{
-				std::cout << "Failed to open input file!";
-				return;
-			}
-
-			std::string str;
-			std::vector<std::string> inputLines;
-
-			// Read lines
-			while (std::getline(file, str))
-			{
-				inputLines.push_back(str);
-			}
-			file.close();
+			const auto input = readFile(inputPath);
 
 			// Loop lines 
 			std::vector< instructionPair> movements;
 
-			for (const auto& line : inputLines)
+			for (const auto& line : input)
 			{
 				instructionPair newInstruction;
 
