@@ -47,5 +47,8 @@
     <ClInclude Include="tasks\day_three\day3.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="utility\timer.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

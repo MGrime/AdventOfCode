@@ -8,6 +8,7 @@
 #include <array>
 
 #include "../../utility/funcs.hpp"
+#include "../../utility/timer.hpp"
 
 // It is important to note for todays thing that std::bitset stores numbers backwards from what you would expect. That is why the loop in part two is backwards.
 // In part one, it didnt matter, as that could be done in reverse. However part two cannot be done in reverse as the array is manipulated, manipping in the
@@ -24,8 +25,11 @@ namespace aoc
 
 		void execute()
 		{
+			utility::ScopeTimer myTimer;
 			partOne();
+			std::cout << "Part 1: " << myTimer.GetDeltaTime().GetMilliseconds() << "(ms)\n";
 			partTwo();
+			std::cout << "Part 2: " << myTimer.GetDeltaTime().GetMilliseconds() << "(ms)\n";
 		}
 
 		void partOne()
