@@ -142,12 +142,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="tasks\day_four\day4.cpp" />
     <ClCompile Include="tasks\day_one\day1.cpp" />
     <ClCompile Include="tasks\day_three\day3.cpp" />
     <ClCompile Include="tasks\day_two\day2.cpp" />
     <ClCompile Include="utility\funcs.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="tasks\day_four\day4.hpp" />
     <ClInclude Include="tasks\day_one\day1.hpp" />
     <ClInclude Include="tasks\day_three\day3.hpp" />
     <ClInclude Include="tasks\day_two\day2.hpp" />

@@ -30,6 +30,9 @@
     <ClCompile Include="tasks\day_three\day3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="tasks\day_four\day4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="utility\funcs.hpp">
@@ -48,6 +51,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="utility\timer.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tasks\day_four\day4.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
