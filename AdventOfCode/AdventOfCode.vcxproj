@@ -145,6 +145,7 @@
     <ClCompile Include="tasks\day_five\day5.cpp" />
     <ClCompile Include="tasks\day_four\day4.cpp" />
     <ClCompile Include="tasks\day_one\day1.cpp" />
+    <ClCompile Include="tasks\day_six\day6.cpp" />
     <ClCompile Include="tasks\day_three\day3.cpp" />
     <ClCompile Include="tasks\day_two\day2.cpp" />
     <ClCompile Include="utility\funcs.cpp" />
@@ -153,6 +154,7 @@
     <ClInclude Include="tasks\day_five\day5.hpp" />
     <ClInclude Include="tasks\day_four\day4.hpp" />
     <ClInclude Include="tasks\day_one\day1.hpp" />
+    <ClInclude Include="tasks\day_six\day6.hpp" />
     <ClInclude Include="tasks\day_three\day3.hpp" />
     <ClInclude Include="tasks\day_two\day2.hpp" />
     <ClInclude Include="tasks\execution_map.hpp" />

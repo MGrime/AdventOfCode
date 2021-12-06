@@ -8,6 +8,7 @@ typedef void (*task_execute)(void);
 #include "day_three/day3.hpp"
 #include "day_four/day4.hpp"
 #include "day_five/day5.hpp"
+#include "day_six/day6.hpp"
 
 namespace aoc
 {
@@ -16,7 +17,8 @@ namespace aoc
 		{2, d2::execute},
 		{3, d3::execute},
 		{4, d4::execute},
-		{5, d5::execute}
+		{5, d5::execute},
+		{6, d6::execute}
 	};
 
 	const size_t MAX_DAYS = aoc::EXECUTION_MAP.size();
