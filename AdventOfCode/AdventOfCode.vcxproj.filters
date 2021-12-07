@@ -39,6 +39,9 @@
     <ClCompile Include="tasks\day_six\day6.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="tasks\day_seven\day7.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="utility\funcs.hpp">
@@ -66,6 +69,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="tasks\day_six\day6.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tasks\day_seven\day7.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
